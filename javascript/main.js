@@ -8,14 +8,14 @@ function getComputerChoice() {
     let choice;
     switch (randomNumber) {
         case 0:
-            choice = `Rock`;
+            choice = `rock`;
             break;
 
         case 1:
-            choice = `Paper`;
+            choice = `paper`;
             break;
         case 2:
-            choice = `Scissors`;
+            choice = `scissors`;
             break;
     }
     return choice;
@@ -36,56 +36,37 @@ function playRound() {
     let result;
 
     // conditional statements that compares user input and computer's choice
-    if (toLowerP1ayerSelection === `rock` && computerSelection === `Scissors`) {
-        console.log("Computer's choice:- Scissors");
-        result = `You won! Rock beats Scissors, good job`;
-    }
-    else if (toLowerP1ayerSelection === `paper` && computerSelection === `Rock`) {
-        console.log("Computer's choice:- Rock");
-        result = `You won! Paper beats Rock good job`;
-    }
+    if ((toLowerP1ayerSelection === `rock` && computerSelection === `scissors`) || 
+        (toLowerP1ayerSelection === `paper` && computerSelection === `rock`) || 
+        (toLowerP1ayerSelection === `scissors` && computerSelection === `paper`)) {
 
-    else if (toLowerP1ayerSelection === `scissors` && computerSelection === `Paper`) {
-        console.log("Computer's choice:- Paper");
-        result = `You won! Scissors beat Paper, goof job `;
-    }
-
-
-
-    else if (toLowerP1ayerSelection === `rock` && computerSelection === `Rock`) {
-        console.log("Computer's choice:- Rock");
-        result = `It's a tie, there's still chances remaining`;
-    }
-    else if (toLowerP1ayerSelection === `paper` && computerSelection === `Paper`) {
-        console.log("Computer's choice:- Paper");
-        result = `It's a tie, there's still chances remaining`;
-    }
-    else if (toLowerP1ayerSelection === `scissors` && computerSelection === `Scissors`) {
-        console.log("Scissors");
-        result = `It's a tie, there's still chances remaining`;
-    }
-
-
-
-    else if (toLowerP1ayerSelection === `rock` && computerSelection === `Paper`) {
-        console.log("Computer's choice:- issors");
-        result = `You lose! Scissors beats Rock`;
-    }
-    else if (toLowerP1ayerSelection === `scissors` && computerSelection === `Rock`) {
-        console.log("Computer's choice:- Rock");
-        result = `You Lose! Rock beats Scissors`;
-    }
-    else if (toLowerP1ayerSelection === `paper` && computerSelection === `scissors`) {
-        console.log("Computer's choice:- Paper");
-        result = `You Lose! Rock beats Scissors`;
+    console.log(`Computer's choice:- ${computerSelection}`);
+     result = `You won! ${toLowerP1ayerSelection} beats ${computerSelection} good job`;
     }
     
+
+
+    else if (toLowerP1ayerSelection === computerSelection) {
+
+        console.log(`Computer's choice:- ${computerSelection}`);
+        result = `It's a tie, there's still chances remaining`;
+    }
+
+
+    else if ((toLowerP1ayerSelection === `rock` && computerSelection === `paper`) ||
+             (toLowerP1ayerSelection === `scissors` && computerSelection === `rock`) ||
+             (toLowerP1ayerSelection === `paper` && computerSelection === `scissors`)) {
+       
+     console.log(`Computer's choice:- ${computerSelection}`);
+     result = `You Lose! ${computerSelection} beats ${toLowerP1ayerSelection}`;
+    }
 
 
     else {
         result = `Enter a valid option!!`;
     }
 
+    console.log(toLowerP1ayerSelection);
 
     return result;
 }
