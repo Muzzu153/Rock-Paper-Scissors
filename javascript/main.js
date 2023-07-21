@@ -18,7 +18,7 @@ function getComputerChoice() {
         case 0:
             choice = `rock`;
             break;
-
+            
         case 1:
             choice = `paper`;
             break;
@@ -84,21 +84,22 @@ function game() {
     //for loop that calls the playRound() function and breaks when either of them reaches the score of 5 
     for (; ;) {
         console.log(playRound());
-        if(computerScore === 5 || playerScore === 5) break;
+        if (computerScore === 5 || playerScore === 5) break;
+        
     }
-    
+
     //when computer's score reaches 5 this resets the both scores to 0 and displays the result
-    if(computerScore==5){
+    if (computerScore == 5) {
         playerScore = 0;
         computerScore = 0;
-        return result=`Too bad you lost this game`;
+        return result = `Too bad you lost this game`;
     }
 
     //when player's score reaches 5 this resets the both scores to 0 and displays the result
-    else if(playerScore===5){
+    else if (playerScore === 5) {
         playerScore = 0;
         computerScore = 0;
-        return result=`Congratulations! You won!`;
+        return result = `Congratulations! You won!`;
     }
 
 } 
