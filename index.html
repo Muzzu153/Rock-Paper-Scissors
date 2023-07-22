@@ -23,9 +23,11 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            background-image: url(./images/sunlight-landscape-night-minimalism-sky-artwork-620197-wallhere.com.jpg);
+            background-color: #3f4344;
+            /* background-image: url(./images/background.png); */
             background-size: cover;
             background-repeat: no-repeat;
+            flex-wrap: wrap;
         }
 
         /* Title  */
@@ -35,8 +37,20 @@
             justify-content: center;
             align-items: center;
             background: none;
-            color: wheat;
+            color: #c7c1bc;
         }
+
+        header h1{
+            padding: 20px;
+            transition: 0.4s all ease;
+        }
+
+        header > h1:hover{
+            color: #9d7463;
+            border: 2px solid  #9d7463;
+            border-radius: 10px;
+        }
+
         /* Title ends  */
 
 
@@ -54,33 +68,34 @@
             width: 200px;
             height: 65px;
             margin: 10px;
-            background: wheat;
+            background: #dfdbd8;
             border-radius: 8px;
             border: none;
             overflow: hidden;
             font-size: 22px;
             font-weight: 600;
             box-shadow: #cd486b;
+            transition: 0.4s all ease;
         }
 
         
         .button:hover{
             cursor: pointer;
             opacity: 100%;
-            transition: 0.5s all ease-in-out;
-            background: rgb(207, 174, 112);
+            background: #ada9a7;
         }
 
         .button:active{
             color: white;
-            background: rgb(3, 3, 85);
+            background: #9d7463;
+            transform: scale(0.9);
         }
         /* the button section ends here  */
         
         
         /* footer with the copyright and social media links starts here  */
         footer {
-            background-color: rgb(5, 5, 77);
+            background-color: #9d7463;
             width: 100%;
         }
         
@@ -90,7 +105,7 @@
             width: 100%;
             justify-content: center;
             font-weight:bolder;
-            color: wheat;
+            color: #dfdbd8;  
         }
 
         #socials {
@@ -104,7 +119,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: wheat;
+            background: #dfdbd8;
             margin: 10px;
             border: 1.5px solid black;
             border-radius: 100%;
@@ -112,9 +127,10 @@
             height: 40px;
             position: relative;
             overflow: hidden;
+            transition: 0.4s all ease;
         }
 
-        a.link:hover {
+        a.links:hover {
             border: 1.5px solid white;
         }
 
@@ -126,7 +142,6 @@
             position: absolute;
             top: 100%;
             transition: 0.5s all ease-in-out;
-
         }
 
 
@@ -176,6 +191,10 @@
             fill: white
         }
 
+        a.links:active{
+            transform: scale(0.9);
+        }
+
     </style>
 </head>
 
@@ -220,7 +239,7 @@
         <!-- Copyright sign  -->
         <hr style="margin-bottom: 15px; background-color:#00ACEE; " >
         <div class="CC">
-            &copy Muzzu153
+            <p>&copy Muzzu153</p>
         </div>
         <!-- Copyright sign  -->
 
