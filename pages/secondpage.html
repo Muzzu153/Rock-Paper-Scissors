@@ -40,18 +40,18 @@
             height: 60px;
         }
 
-        header h1{
+        header h1 {
             transition: 0.4s all ease;
         }
 
-        header > h1:hover{
+        header>h1:hover {
             color: #9d7463;
         }
 
         /* Title ends  */
 
 
-        .score{
+        .score {
             color: #c7c1bc;
             display: flex;
             justify-content: center;
@@ -62,7 +62,7 @@
             margin: auto;
         }
 
-        section{
+        section {
             color: #c7c1bc;
             font-size: larger;
             font-weight: bolder;
@@ -70,84 +70,52 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            /* border: 2px solid black; */
-            /* flex-direction: row; */
         }
 
-        section div img{
+        section div img {
             height: 100px;
             width: 100px;
         }
 
-        .choices{
+        .choices {
             display: flex;
             flex-direction: column;
-            width: 300px;
             height: 540px;
         }
 
-        
-
-        .choices >.leftSide_choice > p{
-            padding: 50px 0px 10px 20px;
-        }
-        
-        .leftSide_choice{
+        .leftSide_choice {
             padding: 10px;
-            margin: 20px 0px 20px 50px;
-            display: flex;
+            margin: 20px 0px 20px 120px;
             height: 120px;
-            /* transition: 0s all; */
-            /* height: 300px; */
+            width: 200px;
         }
-        
-        .leftSide_choice:hover{
+
+        .leftSide_choice:hover {
             box-shadow: 2px 2px 2px #9d7463;
             cursor: pointer;
-            padding: 9px;
+            padding-left: 45px;
             border: #9d7463 solid 1px;
             border-radius: 8px;
         }
 
-        .effect{
+        .effect {
             transition: 0.2s all ease;
         }
-        
-        .effect:active{
+
+        .effect:active {
             transform: scale(0.96);
         }
 
-        .choices >.rightSide_choice > p{
-            padding: 50px 10px 0px 20px;
-        }
-        
-        
-        .rightSide_choice{
+        .rightSide_choice {
             padding: 10px;
-            margin: 20px 46px 20px 0px;
-            display: flex;
+            margin: 20px 120px 20px 0px;
+            height: 120px;
         }
+ 
 
-        #comp_scissor{
-            position: relative;
-        }
-
-    
-        #comp_scissor > img{
-            position: absolute;
-            right: 50px;
-
-        }
-
-        #comp_scissor> p{
-            position: absolute;
-            right: 150px;
-        }
-        
-        .result{
+        .result {
             height: 400px;
             width: 400px;
-            /* border: 2px solid black; */
         }
 
 
@@ -249,7 +217,7 @@
             fill: white
         }
 
-        a.links:active{
+        a.links:active {
             transform: scale(0.9);
         }
     </style>
@@ -261,58 +229,65 @@
         <h1>ROCK - PAPER - SCISSORS </h1>
     </header>
 
+    <!-- Score -->
     <div class="score">
         <p>0-1</p>
     </div>
+    <!-- Score  -->
 
+    <!-- both player choices dislaying section -->
     <section>
-
-
-            <div id="player_choice" class="choices">
-                <div id="player_rock" class="leftSide_choice effect">
-                     <img src="../images/stone.png" alt="">
-                     <p>ROCK</p>
-                </div>
-               
-                <div id="player_paper" class="leftSide_choice effect">
-                    <img src="../images/paper.png" alt="">
-                    <p>PAPER</p>
-                </div>
-
-                <div id="player_scissor" class="leftSide_choice effect">
-                    <img src="../images/scissor.png" alt="">
-                    <p>SCISSORS</p>
-                </div>
+        
+        <!-- Player selections starts here  -->
+        <div id="player_choice" class="choices">
+            <div id="player_rock" class="leftSide_choice effect">
+                <img src="../images/stone.png" alt="">
+                <!-- <p>ROCK</p> -->
             </div>
-
-
-
-            <div class="result">
-                You lose!! Rock beats Scissors
+            
+            <div id="player_paper" class="leftSide_choice effect">
+                <img src="../images/paper.png" alt="">
+                <!-- <p>PAPER</p> -->
             </div>
-
-
-
-            <div id="comp_choice" class="choices">
-                <div id="comp_rock" class="rightSide_choice">
-                    <p>ROCK</p>
-                    <img src="../images/stone.png" alt=""> 
-               </div>
-              
-               <div id="comp_paper" class="rightSide_choice">
-                   <p>PAPER</p>
-                   <img src="../images/paper.png" alt="">
-               </div>
-
-               <div id="comp_scissor" class="rightSide_choice">
-                   <p>SCISSORS</p>
-                   <img src="../images/scissor.png" alt="">
-               </div>
+            
+            <div id="player_scissor" class="leftSide_choice effect">
+                <img src="../images/scissor.png" alt="">
+                <!-- <p>SCISSORS</p> -->
             </div>
-
-
+        </div>
+        <!-- Player selections starts here  -->
+        
+        
+        <!-- Result section  -->
+        <div class="result">
+            You lose!! Rock beats Scissors
+        </div>
+        <!-- Result section end  -->
+        
+        
+        <!-- Computer selection starts  -->
+        <div id="comp_choice" class="choices">
+            <div id="comp_rock" class="rightSide_choice">
+                <!-- <p>ROCK</p> -->
+                <img src="../images/stone.png" alt="">
+            </div>
+            
+            <div id="comp_paper" class="rightSide_choice">
+                <!-- <p>PAPER</p> -->
+                <img src="../images/paper.png" alt="">
+            </div>
+            
+            <div id="comp_scissor" class="rightSide_choice">
+                <!-- <p>SCISSORS</p> -->
+                <img src="../images/scissor.png" alt="">
+            </div>
+        </div>
+        <!-- Computer selection starts  -->
+        
+        
     </section>
-
+    <!-- both player choices dislaying section ends -->
+    
     <footer>
 
         <!-- Copyright sign  -->
