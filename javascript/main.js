@@ -46,7 +46,7 @@ function playRound() {
         (toLowerP1ayerSelection === `scissors` && computerSelection === `paper`)) {
 
         console.log(`Computer's choice:- ${computerSelection}`);
-        result = `You won! ${toLowerP1ayerSelection} beats ${computerSelection} good job`;
+        result = `You won! ${toLowerP1ayerSelection} beats ${computerSelection}, good job`;
         console.log(`Score: Player = ${playerScore += 1}, Computer = ${computerScore}`);
     }
 
