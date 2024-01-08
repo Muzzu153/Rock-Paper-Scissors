@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="./javascript/main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
 
     <style>
@@ -15,7 +14,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         body {
             font-family: 'Raleway', sans-serif;
             width: 100vw;
@@ -38,14 +37,15 @@
             color: #c7c1bc;
         }
 
-        header h1{
+        header h1 {
             padding: 20px;
             transition: 0.4s all ease;
         }
 
-        header > h1:hover{
+        header>h1:hover {
             color: #9d7463;
         }
+
         /* Title ends  */
 
 
@@ -56,9 +56,9 @@
             margin-bottom: 150px;
             align-items: center;
         }
-        
-         /* styling of the button */
-         .button {
+
+        /* styling of the button */
+        .button {
             font-family: 'Raleway', sans-serif;
             width: 200px;
             height: 65px;
@@ -73,34 +73,35 @@
             transition: 0.4s all ease;
         }
 
-        
-        .button:hover{
+
+        .button:hover {
             cursor: pointer;
             opacity: 100%;
             background: #ada9a7;
         }
 
-        .button:active{
+        .button:active {
             color: white;
             background: #9d7463;
             transform: scale(0.9);
         }
+
         /* the button section ends here  */
-        
-        
+
+
         /* footer with the copyright and social media links starts here  */
         footer {
             background-color: #9d7463;
             width: 100%;
         }
-        
+
         .CC {
             cursor: pointer;
             display: flex;
             width: 100%;
             justify-content: center;
-            font-weight:bolder;
-            color: #dfdbd8;  
+            font-weight: bolder;
+            color: #dfdbd8;
         }
 
         #socials {
@@ -171,25 +172,24 @@
             transition: 0.5s all ease-in-out;
             background: none;
         }
-        
+
         a.links:hover svg {
             transition: 0.5s all ease-in-out;
             transform: rotate(360deg);
         }
-        
+
         a.links svg path {
             transition: 0.5s all ease-in-out
         }
-        
+
         .links:hover svg path {
             transition: 0.5s all ease-in-out;
             fill: white
         }
 
-        a.links:active{
+        a.links:active {
             transform: scale(0.9);
         }
-
     </style>
 </head>
 
@@ -209,20 +209,20 @@
     <!-- Main menu starts here  -->
     <main id="button_section">
 
-        
-            <a href="./pages/secondpage.html">
-                <button type="button" class="button">PLAY </button>
-            </a>
-       
+
+        <a href="./pages/secondpage.html">
+            <button id="startBtn" type="button" class="button">PLAY </button>
+        </a>
+
 
 
         <button type="button" class="button">SETTINGS
-     
+
         </button>
 
 
-        <button type="button" class="button">QUIT
-        
+        <button type="button" id="quit_button" class="button">QUIT
+
         </button>
 
     </main>
@@ -234,7 +234,7 @@
     <footer>
 
         <!-- Copyright sign  -->
-        <hr style="margin-bottom: 15px; background-color:#00ACEE; " >
+        <hr style="margin-bottom: 15px; background-color:#00ACEE; ">
         <div class="CC">
             <p>&copy Muzzu153</p>
         </div>
@@ -300,6 +300,15 @@
 
         </div>
     </footer>
+
+    <!-- <script src="./javascript/final_javascript.js" defer ></script> -->
+
+    <script>
+        let quitBtn = document.getElementById(`quit_button`);
+        quitBtn.addEventListener(`click`, function(){
+            location.href =`https://github.com/Muzzu153/Rock-Paper-Scissors`;
+        });        
+    </script>
 
 </body>
 
