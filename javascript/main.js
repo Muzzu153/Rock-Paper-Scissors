@@ -13,6 +13,10 @@ const compRock = document.getElementById(`comp_rock`);
 const compPaper = document.getElementById(`comp_paper`);
 const compScissor = document.getElementById(`comp_scissor`);
 
+// player buttons 
+const playerRock = document.getElementById(`player_rock`)
+const playerPaper = document.getElementById(`player_paper`)
+const playerScissor = document.getElementById(`player_scissor`)
 
 // displays a random choice out of the three
 function getComputerChoice() {
@@ -136,10 +140,6 @@ function playRound(playerSelection) {
 }
 
 
-// player buttons 
-const playerRock = document.getElementById(`player_rock`)
-const playerPaper = document.getElementById(`player_paper`)
-const playerScissor = document.getElementById(`player_scissor`)
 
 playerRock.addEventListener(`click`, () => {
     playRound(`rock`);
