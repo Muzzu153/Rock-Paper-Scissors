@@ -122,14 +122,6 @@ function playRound(playerSelection) {
             result.textContent = `Too bad you lost this game`;
         }
     }
-
-
-    else {
-        result = `Enter a valid option!!`;
-    }
-
-    return result;
-
 }
 
 
