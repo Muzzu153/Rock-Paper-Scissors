@@ -78,13 +78,6 @@ function playRound(playerSelection) {
         compRock.removeAttribute(`style`);
     }
 
-    //prompt asks user to enter a choice between the three
-    // const playerSelection = prompt("Enter your choice", " ")  //first we store it in
-    // const toLowerP1ayerSelection = playerSelection.toLowerCase(); //converts choice entered by user to Lower case for comparison
-
-    //stores the result of getComputerChoice]
-    // const computerSelection = getComputerChoice();
-
     // conditional statements that compares user input and computer's choice
     if ((playerSelection === `rock` && computerSelection === `scissor`) ||
         (playerSelection === `paper` && computerSelection === `rock`) ||
@@ -150,30 +143,3 @@ playerPaper.addEventListener(`click`, () => {
 playerScissor.addEventListener(`click`, () => {
     playRound(`scissor`);
 });
-
-//Function to start the game
-// This functions calls the playRound() function to start the game and end it when either the player or the computer reaches the score of 5
-function game() {
-
-    //for loop that calls the playRound() function and breaks when either of them reaches the score of 5 
-    for (; ;) {
-        console.log(playRound());
-        if (computerScore === 5 || playerScore === 5) break;
-
-    }
-
-    //when computer's score reaches 5 this resets the both scores to 0 and displays the result
-    if (computerScore == 5) {
-        playerScore = 0;
-        computerScore = 0;
-        return result = `Too bad you lost this game`;
-    }
-
-    //when player's score reaches 5 this resets the both scores to 0 and displays the result
-    else if (playerScore === 5) {
-        playerScore = 0;
-        computerScore = 0;
-        return result = `Congratulations! You won!`;
-    }
-
-} 
